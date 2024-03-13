@@ -1,9 +1,12 @@
 <template>
   <div class="Sixbackground">
-    <v-container style="width: 80%">
-      <v-row class="justify-center flex align-center mt-10 mb-10">
+    <v-container style="width: 80%; padding: 1px !important">
+      <v-row class="justify-center flex align-center mt-10 mb-10 xsdirection">
         <v-col md="4" xs="12">
-          <img src="https://www.lambda.im/img/42.3dedab56.png" />
+          <img
+            src="https://www.lambda.im/img/42.3dedab56.png"
+            class="xswidth"
+          />
         </v-col>
         <v-col md="8" xs="12">
           <div class="flex-column">
@@ -43,5 +46,15 @@
 .Sixbackground {
   width: 100vw;
   background-color: #eceafb;
+}
+@media (max-width: 575.98px) {
+  .xswidth {
+    width: 100%;
+  }
+  .xsdirection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 </style>

@@ -66,7 +66,7 @@
             </div>
           </div>
           <div
-            class="d-flex justify-space-between secondPart_font_family align-center flex-wrap"
+            class="xsdirection d-flex justify-space-evenly secondPart_font_family align-center flex-wrap"
             style="margin-top: 50px"
           >
             <div>
@@ -131,7 +131,7 @@
             DAPP based on LambdaNetwork
           </p>
           <div
-            class="d-flex align-center justify-space-between flex-wrap"
+            class="d-flex align-center justify-space-evenly flex-wrap"
             style="margin-top: 100px"
           >
             <div class="flex-column">
@@ -171,13 +171,19 @@
                 Get LAMB
               </button>
             </div>
-            <img src="https://www.lambda.im/img/section8-img.21546110.png" />
+            <img
+              src="https://www.lambda.im/img/section8-img.21546110.png"
+              class="xswidth"
+            />
           </div>
           <div
-            class="d-flex align-center justify-space-between flex-wrap"
+            class="d-flex align-center justify-space-evenly flex-wrap"
             style="margin-top: 70px"
           >
-            <img src="https://www.lambda.im/img/section8-img2.0f4db228.png" />
+            <img
+              src="https://www.lambda.im/img/section8-img2.0f4db228.png"
+              class="xswidth"
+            />
             <div class="flex-column">
               <div class="d-flex align-center ga-4">
                 <img
@@ -223,7 +229,8 @@
 </template>
 
 <script setup lang="ts">
-import { first_imageUrls, second_imageUrls } from "../constants/image";
+import { first_imageUrls } from "../constants/image";
+import { second_imageUrls } from "../constants/image";
 
 const getImageStyle = (index: number) => {
   if (index === 2) {
@@ -239,6 +246,27 @@ const getImageStyle = (index: number) => {
 };
 </script>
 <style>
+@media (max-width: 575.98px) {
+  .xsdirection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .xswidth {
+    width: 100%;
+  }
+  .logo_container .d-flex {
+    flex-wrap: wrap;
+  }
+  .logo_container img {
+    width: 25%;
+    height: auto;
+  }
+  .bg-rewards {
+    width: 100% !important;
+  }
+}
+
 .rewards-text {
   font-size: 16px;
   color: "#fff";

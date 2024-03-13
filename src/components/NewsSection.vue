@@ -1,6 +1,6 @@
 <template>
   <div class="newsbackground">
-    <v-container style="width: 80%">
+    <v-container style="width: 80%; padding: 1px !important">
       <v-row class="justify-center align-center mt-10 mb-10">
         <p
           style="
@@ -14,24 +14,26 @@
         </p>
       </v-row>
       <v-row
-        class="justify-center align-center ga-10"
+        class="justify-center align-center ga-10 xsdirection d-flex"
         style="padding-bottom: 100px"
       >
         <div
-          class="flex-column"
+          class="flex-column flex"
           v-for="(newsItem, index) in newsData"
           :key="index"
-          style="
-            width: 25%;
-            box-shadow: 1px 3px 22px 0 #e6e4fe;
-            border: 1px solid #e8e8e8;
-          "
+          style="box-shadow: 1px 3px 22px 0 #e6e4fe; border: 1px solid #e8e8e8"
         >
           <div>
-            <img :src="newsItem.img" alt="picture" width="100%" />
+            <img
+              :src="newsItem.img"
+              alt="picture"
+              class="xswidth"
+              width="250px"
+            />
           </div>
           <div
             style="
+              width: 250px;
               padding: 15px;
               text-align: center;
               background-color: #fff;
@@ -54,5 +56,15 @@ import { newsData } from "../constants/newsdata";
 .newsbackground {
   width: 100vw;
   background-color: #fff;
+}
+@media (max-width: 575.98px) {
+  .xsdirection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .xswidth {
+    width: 100%;
+  }
 }
 </style>

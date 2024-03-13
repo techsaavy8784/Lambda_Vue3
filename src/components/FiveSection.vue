@@ -10,12 +10,14 @@
         </v-col>
         <v-col
           cols="justify-center"
-          style="width: 70%; margin-top: 50px; margin-bottom: 90px"
+          style="margin-top: 50px; margin-bottom: 90px"
         >
           <swiper
             :navigation="true"
             :modules="modules"
             :options="swiperOptions"
+            style="width: 70%"
+            class="xsswiperwidth"
           >
             <swiper-slide v-for="(slide, index) in slides" :key="index">
               <div class="flex-column justify-center">
@@ -103,5 +105,10 @@ const modules = ref([Navigation]);
   color: #fff;
   font-size: 14px;
   margin-bottom: 33px;
+}
+@media (max-width: 575.98px) {
+  .xsswiperwidth {
+    width: 100% !important;
+  }
 }
 </style>

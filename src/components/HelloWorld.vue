@@ -1,15 +1,17 @@
 <template>
-  <v-container fluid class="fill-height">
+  <body>
+    <!-- class="fill-height" -->
     <!-- <v-responsive class="align-centerfill-height mx-auto"> -->
-    <TitleSection />
+
+    <!-- <TitleSection />
     <SecondSection />
     <ThirdSection />
     <FourSection />
     <FiveSection />
     <SixSection />
-    <NewsSection />
+    <NewsSection /> -->
     <!-- </v-responsive> -->
-  </v-container>
+  </body>
 </template>
 
 <script setup lang="ts">

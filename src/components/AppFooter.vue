@@ -1,22 +1,39 @@
+<!-- <v-col md="4" xs="6" class="vcol">
+  <a
+    v-for="item in items"
+    :key="item.title"
+    :href="item.href"
+    :title="item.title"
+    class="d-inline-block mx-2 social-link"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <v-icon
+      :icon="item.icon"
+      :size="item.icon === '$vuetify' ? 24 : 16"
+    />
+  </a>
+</v-col> -->
 <template>
-  <v-footer app style="padding-top: 50px; background-color: #2d3969">
-    <v-col md="3" xs="6" class="vcol">
-      <a
-        v-for="item in items"
-        :key="item.title"
-        :href="item.href"
-        :title="item.title"
-        class="d-inline-block mx-2 social-link"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <v-icon :icon="item.icon" :size="item.icon === '$vuetify' ? 24 : 16" />
-      </a>
-    </v-col>
-    <v-col md="3" xs="6"><p>Home</p></v-col>
-    <v-col md="2" xs="6"><p>About Lambda</p></v-col>
-    <v-col md="2" xs="6"><p>Docs</p></v-col>
-    <v-col md="2" xs="6"><p>Ecosystem</p></v-col>
+  <v-footer app style="padding-top: 57px; background-color: #2d3969">
+    <v-row style="margin: -9px !important">
+      <v-col md="6" xs="12" class="vcol">
+        <v-row>
+          <v-col md="6" xs="6"><p style="text-align: center">Home</p></v-col>
+          <v-col md="6" xs="6"
+            ><p style="text-align: center">About Lambda</p></v-col
+          >
+        </v-row>
+      </v-col>
+      <v-col md="6" xs="12" class="vcol">
+        <v-row>
+          <v-col md="6" xs="6"><p style="text-align: center">Docs</p></v-col>
+          <v-col md="6" xs="6"
+            ><p style="text-align: center">Ecosystem</p></v-col
+          >
+        </v-row>
+      </v-col>
+    </v-row>
   </v-footer>
 </template>
 
@@ -58,7 +75,6 @@ const items = [
 <style>
 .vcol {
   justify-content: center;
-  font-family: DINAlternate-Bold, DINAlternate !important;
   color: #fff;
   font-size: 14px;
   line-height: 23px;

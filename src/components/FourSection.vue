@@ -5,7 +5,7 @@
         <p class="fourfont" style="margin-top: 45px">
           Lambda is an Open Blockchain Network,
         </p>
-        <p class="fourfont">
+        <p class="fourfont" style="margin-bottom: 70px">
           Anyone can join in the Lambda blockchain network, for keeping abreast
           of the new development
         </p>
@@ -17,7 +17,6 @@
 <style>
 .fourbackground {
   width: 100vw;
-  height: 230px;
   background-image: url(https://www.lambda.im/img/bl.aa18056d.png);
   background-size: cover;
   background-repeat: no-repeat;
