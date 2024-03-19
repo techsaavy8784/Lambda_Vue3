@@ -16,7 +16,6 @@
             </p>
             <div class="mt-14">
               <div class="image-container d-flex ga-6">
-                <!-- <VueSlickCarousel :settings="settings"> -->
                 <img
                   v-for="(imageUrl, index) in ecosystem_imageUrls"
                   :key="index"
@@ -24,7 +23,6 @@
                   :alt="`Chain Icon ${index}`"
                   class="img-animation-right"
                 />
-                <!-- </VueSlickCarousel> -->
               </div>
 
               <div class="image-container d-flex ga-6 mt-8">
@@ -139,20 +137,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import { ecosystem_imageUrls } from "../constants/image";
-
-const settings = ref({
-  arrows: false,
-  dots: false,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 2000,
-  cssEase: "linear",
-});
 </script>
 <style scoped>
 @media (max-width: 575.98px) {

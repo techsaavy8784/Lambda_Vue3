@@ -1,11 +1,9 @@
 <template>
-  <v-app id="inspire" style="position: fixed">
-    <!-- v-if="!drawer" -->
+  <v-app style="position: fixed; z-index: 10">
     <v-app-bar
       class="justify-center flex-wrap"
       style="box-shadow: none; position: fixed; background: transparent"
     >
-      <!-- class="d-none d-sm-flex" -->
       <v-btn
         v-for="(item, index) in items"
         :key="index"
@@ -13,41 +11,13 @@
       >
         {{ item }}
       </v-btn>
-
-      <!-- <v-app-bar-nav-icon
-        @click="drawer = !drawer"
-        class="d-flex d-sm-none"
-      ></v-app-bar-nav-icon> -->
     </v-app-bar>
-    <!-- 
-    <v-navigation-drawer
-      v-model="drawer"
-      temporary
-      style="background-color: #fff; width: 80vw; height: 100vh"
-    >
-      <v-list nav dense>
-        <v-list-item
-          v-for="item in items"
-          :key="item"
-          @click="handleItemClick(item)"
-        >
-          <v-list-item-title>{{ item }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
   </v-app>
 </template>
 
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from "vue";
-
-const drawer = ref(false);
 const items = ref(["Storage", "Explorer", "GetLAMB"]);
-const handleItemClick = (item) => {
-  // Handle item click action here
-  console.log(`Clicked on: ${item}`);
-};
-
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 });
@@ -98,8 +68,5 @@ const getButtonStyle = (index: number) => {
     flex-direction: column;
     justify-content: center;
   }
-  /* .xswidth {
-    width: 100%;
-  } */
 }
 </style>

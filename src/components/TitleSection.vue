@@ -60,7 +60,7 @@
 import { ref, onMounted } from "vue";
 import { formatTime } from "../utills";
 
-const countDownDate = new Date("Mar 17, 2024 00:00:00").getTime();
+const countDownDate = new Date("Mar 30, 2024 00:00:00").getTime();
 
 const days = ref(0);
 const hours = ref(0);
